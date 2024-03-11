@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+	transform:translateX(0%);
+}
+
+.gridBoxContainer {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridContainerBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.gridContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.gridTitle {
+  padding: 0 0 10px 0;
+  border-bottom: 2px solid white;
+  text-align: left;
+}
+
+.gridContent {
+  text-align: left;
+}
+
+.buttonContainer {
+  display: none;
+}
+
+/* Adjust the grid layout for screens up to 768px width */
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Adjust the grid layout for screens up to 480px width */
+@media screen and (max-width: 480px) {
+  * {
+    /* overflow: hidden; */
+		/* overflow-y:hidden; */
+  }
+
+  .buttonContainer {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  button {
+    border: none;
+    background: none;
+    color: black;
+    font-size: 35px;
+  }
+}
+
+/* Mobile View */
+.mobileGridContainer {
+  display: flex;
+}
+
+.mobileGridBoxContainer {
+  border: 1px solid black;
+  min-width: 100% !important;
+  height: 100vh;
+  overflow-x: hidden !important;
+  transition: transform 0.5s ease-in-out;
+}
+
+.mobileGridContentBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileImgContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
